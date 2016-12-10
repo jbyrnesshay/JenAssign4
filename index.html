@@ -1,19 +1,27 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link href="styles.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		
+
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width initial-scale=1">
+			<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<link href="styles.css" rel="stylesheet" type="text/css">
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
 	<body>
 		<div data-role="page" id="first">
-			<div data-role="header">
-			<h1>Assignment #4</h1>
+			<div data-role="header" id="header">
+				<h1>Assignment #4</h1>
+				<nav>
+					<ul>
+						<li>Fucking <a href="#second">2nd  </a>link</li>
+						<li><a href="#first">home</a></li>
+					</ul>
+				</nav>
 			</div>
-			<div data-role="content">
+			<div data-role="content" id="maincontent">
 			<p>
 				click the fucking link to the <a href="#second">second </a>page
 			</p>

@@ -1,0 +1,39 @@
+
+body {
+	font-family: "Comic Sans MS";
+	font-family: Arial, "sans serif";
+
+}
+
+#header h1 {
+	margin: 0;
+	float: left;
+	width: 30%;
+}
+#header nav {
+	float: right;
+}
+#header nav ul li, ul {
+	display: inline-block;
+}
+
+#header nav ul {
+	margin-right: 5em;
+}
+#header nav ul li {
+	margin-left: 3em;
+	border: 1px solid black;
+	background: aqua;
+	width: 10em;
+	text-transform: uppercase;
+	text-align: center;
+}
+#header a {
+
+}
+#header {
+	clear: both;
+	width: 100%;
+	display: block;
+ 	height: 3em;
+}
