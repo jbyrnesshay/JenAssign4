@@ -12,14 +12,14 @@ body {
 	width: 30%;
 	text-transform: uppercase;
 }
-#pg1header nav {
+#pg1header div[data-role="navbar"] {
 	float: right;
 	width: 50%;
-	 
-
 }
- 
-#pg1header nav ul {
+#pg1header div[data-role="navbar"] li {
+	display: inline-block;
+}
+/*#pg1header nav ul {
 	margin-right: 5em;
 	margin-top: .67em;
 	display:inline-block;
@@ -33,7 +33,7 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	display: inline-block;
-}
+}*/
 #pg1header a {
 
 }
