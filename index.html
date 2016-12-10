@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		
 
+		
+		<title> assignment </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width initial-scale=1">
 			<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
@@ -12,26 +13,30 @@
 	</head>
 	<body>
 		<div data-role="page" id="first">
-			<div data-role="header" id="header">
+			<div data-role="header" id="pg1header">
 				<h1>Assignment #4</h1>
 				<nav>
 					<ul>
-						<li>Fucking <a href="#second">2nd  </a>link</li>
+						<li>Fucking <a href="#second" data-transition="turn">2nd</a>link</li>
 						<li><a href="#first">home</a></li>
+						<li>external <a href="external.html" data-ajax="false">page</a><!-- use d-aj false for external same domain, use rel external for offsite-->
 					</ul>
 				</nav>
 			</div>
-			<div data-role="content" id="maincontent">
-			<p>
-				click the fucking link to the <a href="#second">second </a>page
-			</p> 
+			<div data-role="main" class="ui-content">
+				<p>
+					click the fucking link to the <a href="#second" data-transition="turn">second </a>page
+				</p> 
+			
+				<p> click the frigging link to the <a href="#third">third</a>page
+
+				</p>
+		
 			</div>
-			<div data-role="footer" id="footer">
-			<h4></h4>
-			</div>
+			
 		</div>
-		<div data-role="page" id="second">
-			<div data-role="header">
+		<div data-role="page" id="second"  data-title="ya">
+			<div data-role="header"> 
 			<h1>2nd page</h1>
 			</div>
 			<div data-role="content">
@@ -40,6 +45,16 @@
 			<div data-role="footer">
 			<h4></h4>
 			</div>
+		</div>
+		<div data-role="page" id="third" data-theme="c" ajax-enabled="true">
+		   
+		     
+		      <p>Clicked content!</p>
+		      <a href="#contact" data-rel="back" data-role="button">Go back</a>
+		</div>
+	 
+		<div data-role="footer" id="footer">
+			<h4></h4>
 		</div>
 		
 	</body>

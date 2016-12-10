@@ -5,25 +5,26 @@ body {
 
 }
 
-#header h1 {
+#pg1header h1 {
 	margin: 0;
+ 
 	float: left;
 	width: 30%;
 	text-transform: uppercase;
 }
-#header nav {
+#pg1header nav {
 	float: right;
+	width: 50%;
+	 
 
 }
-#header nav ul li, ul {
-	display: inline-block;
-}
-
-#header nav ul {
+ 
+#pg1header nav ul {
 	margin-right: 5em;
 	margin-top: .67em;
+	display:inline-block;
 }
-#header nav ul li {
+#pg1header nav ul li {
 	margin-left: 3em;
 	border: 1px solid black;
 	background: aqua;
@@ -31,18 +32,19 @@ body {
 	width: 10em;
 	text-transform: uppercase;
 	text-align: center;
+	display: inline-block;
 }
-#header a {
+#pg1header a {
 
 }
-#header {
+#pg1header {
 	clear: both;
 	width: 100%;
 	display: block;
  	height: 3em;
  	border-bottom: 1px solid black;
 }
-#footer {
+footer {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
