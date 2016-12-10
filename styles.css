@@ -5,18 +5,18 @@ body {
 
 }
 
-#pg1header h1 {
+#pg1header h1, #pg2header h1 {
 	margin: 0;
  
 	float: left;
 	width: 30%;
 	text-transform: uppercase;
 }
-#pg1header div[data-role="navbar"] {
+#pg1header div[data-role="navbar"], #pg2header div[data-role="navbar"] {
 	float: right;
 	width: 50%;
 }
-#pg1header div[data-role="navbar"] li {
+#pg1header div[data-role="navbar"] li,#pg2header div[data-role="navbar"] li {
 	display: inline-block;
 }
 /*#pg1header nav ul {
@@ -48,4 +48,16 @@ footer {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
+}
+.ui-grid-a, .ui-grid-b {
+
+	
+
+}
+p {
+	width: 75%;
+	background: aqua;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px dotted red;
 }
