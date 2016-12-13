@@ -6,6 +6,7 @@
 		<title> assignment </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width initial-scale=1">
+		<link href="styles.css" rel="stylesheet" type="text/css">
 			<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
 		<link href="styles.css" rel="stylesheet" type="text/css">
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -13,13 +14,13 @@
 	</head>
 	<body>
 		<section data-role="page" id="page1">
-			<div data-role="header" id="pg1header" data-id="pg1header" data-theme="b" data-position="fixed" class="ui-state-persist">
+			<div data-role="header" id="pg1header" data-id="pg1header" data-theme="b" data-position="fixed">
 				<h1>Assignment #4</h1>
-				<div data-role="navbar" class="ui-state-persist" >
+				<div data-role="navbar" id="nav" >
 					<ul>
 						<li><a href="#page2" data-transition="turn">2nd page</a></li>
-						<li><a href="#page1" data-transition="turn">home</a></li>
-						<li><a href="external.html" data-ajax="false">external page</a><!-- use d-aj false for external same domain, use rel external for offsite-->
+						<li><a href="#page1" data-transition="turn" class="ui-btn ui-btn-icon-left ui-icon-home">home</a></li>
+						<li><a href="external.html" data-ajax="false">jquery UI page</a><!-- use d-aj false for external same domain, use rel external for offsite-->
 					</ul>
 				</div>
 			</div>
@@ -33,10 +34,42 @@
 				</p>-->
 				<div class="ui-grid-b">
 					<div class="ui-block-a">
-						<p>you have arrived at the left side of page</p>
+						<p>you have arrived at the left side of page</p
+					>
+					<p>
+					I like to type about things and say a lot of things.  you probably do too.  but the things you say don't make the sense that your small brain makes you think they do.  You are not able to perceive this because of your small mind and bad ways.  I understand things better and would like to tell you about this.  to learn more click <a href="#page2" class="ui-shadow ui-btn ui-corner-all">here</a>.  thank you.
+					</p>
 					</div>
 					<div class="ui-block-b">
-						<p>you have arrived at the other place</p>
+						<p>you have arrived at the other place
+						<a href="#popup" data-rel="popup" id="pop" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext">click</a>
+						</p>
+						<div data-role="popup" id="popup" data-theme="a" class="ui-content"> this is a <strong>popup</strong></div>
+						<form>
+						  <input data-type="search" id="test">
+						 </form>
+						<div class="elements" data-filter="true" data-input="#test">
+						 <p>Drunken Sailor (What Shall We Do with a Drunken Sailor?) Irish Traditional Am What'll we do with a drunken sailor? </p>
+						 <p>What'll we do with a drunken sailor? </p>
+						 <p> What'll we do with a drunken sailor?</p>
+						 <p>Earl-aye in the morning? </p>
+						 <p>Way, hey and up she rises</p> 
+						 <p>Patent blocks o' diff'rent sizes</p> 
+						 <p>Way, hey and up she rises</p> 
+						 <p>Earl-aye in the morning</p> 
+						 <p>Sling him in the long boat till he's sober</p> 
+						 <p>Keep him there and make 'im bale 'er.</p> 
+						 <p>Pull out the plug and wet him all over</p> 
+						 <p>Take 'im and shake 'im, try an' wake 'im. </p><p>Trice him up in a runnin' bowline.</p> 
+						 <p>That's what we'll do with the drunken sailor.</p>
+							</div>
+
+						<a id="funclink" href="#popupBasic" data-rel="popup"></a>
+ 
+						<div data-role="popup" id="popupBasic">
+  						<p id="funcpopup">This is a completely basic popup, no options set.
+  						<button><a id="fun" href="#page2">test</a></button></p>
+						</div>
 					</div>
 					<div class="ui-block-c">
 						<p>you have arrived at the other place too</p>
