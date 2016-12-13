@@ -12,13 +12,13 @@
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
 	<body>
-		<div data-role="page" id="first">
+		<section data-role="page" id="page1">
 			<div data-role="header" id="pg1header" data-id="pg1header" data-theme="b" data-position="fixed" class="ui-state-persist">
 				<h1>Assignment #4</h1>
 				<div data-role="navbar" class="ui-state-persist" >
 					<ul>
-						<li><a href="#second" data-transition="turn">2nd page</a></li>
-						<li><a href="#first" data-transition="turn">home</a></li>
+						<li><a href="#page2" data-transition="turn">2nd page</a></li>
+						<li><a href="#page1" data-transition="turn">home</a></li>
 						<li><a href="external.html" data-ajax="false">external page</a><!-- use d-aj false for external same domain, use rel external for offsite-->
 					</ul>
 				</div>
@@ -31,48 +31,55 @@
 				<p> click the frigging link to the <a href="#third"  >third</a>page
 
 				</p>-->
-			<div class="ui-grid-a">
-			<div class="ui-block-a">
-			<p>you have arrived at the left side of page</p>
-			</div>
-			<div class="ui-block-b">
-			<p>you have arrived at the other place</p>
-			</div>
-			</div>
-			</div>
-			
-		</div>
-		<div data-role="page" id="second"  data-title="ya">
-			<div data-role="header" id="pg2header" data-id="pg1header" data-position="fixed" data-theme="b">
-				 <h1>hello</h1>
-				 <div data-role="navbar" class="ui-state-persist" >
-					<ul>
-						<li><a href="#second" data-transition="turn">2nd page</a></li>
-						<li><a href="#first" data-transition="turn">home</a></li>
-						<li><a href="external.html" data-ajax="false">external page</a><!-- use d-aj false for external same domain, use rel external for offsite-->
-					</ul>
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<p>you have arrived at the left side of page</p>
+					</div>
+					<div class="ui-block-b">
+						<p>you have arrived at the other place</p>
+					</div>
+					<div class="ui-block-c">
+						<p>you have arrived at the other place too</p>
+						<form>
+						<fieldset>
+							<select name="select-choice-b" id="select-choice-b" data-native-menu="false">
+							  <option>my menu</option>
+							  <option value="the best">the best</option>
+							  <option value="better">better</option>
+							  <option value="good">good</option>
+							  <option value="bad">bad</option>
+							  <optionvalue="the worst">the worst</option>
+							  </select>
+
+							</fieldset>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+							<legend>blah blah</legend>
+							
+							<input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
+							<label for = "radio-choice-c">list</label>
+							<input type="radio" name="radio-choice-b" id="radio-choice-d" value="grid">
+							<label for = "radio-choice-d">grid</label>
+							<input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+							<label for = "radio-choice-e">gallery</label>
+							</fieldset>
+							<fieldset>
+							<label for="slider-flip-m">mini flip switch</label>
+							<select name="slider=flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+							<option value="off">No</option>
+							<option value="on" selected=''>yes</option>
+							</select>
+							</fieldset>
+							<fieldset>
+							<label for="slider-fill">blah blah </label>
+							<input type="range" name="slider-fill" id="slider-fill" value="50" min="0" max="100"  data-highlight="true" data-theme="b" data-track-theme="b">
+							</fieldset>
+					</div>
 				</div>
 			</div>
-			<div data-role="content">
-			<div>
-			<p>you have arrived at the left side of page</p>
-			</div>
-			 
-			</div>
-			<div data-role="footer">
-			<h4></h4>
-			</div>
-		</div>
-		<div data-role="page" id="third" data-theme="c" data-dialog="true">
-		   
-		     
-		      <p>Clicked content!</p>
-		      <a href="#first" data-rel="back" data-role="button">Go back</a>
-		</div>
-	 
-		<div data-role="footer" id="footer">
-			<h4></h4>
-		</div>
+		</section>
+ 		 <section data-role="page" id="page2">
+ 		 <p>test</p>
+ 		 </section>
 		<script src="scripts.js"></script>
 	</body>
 </html>
