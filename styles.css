@@ -49,18 +49,30 @@ form {
 #pg1header a {
 
 }
-#test, .test {
+.test {
 	width: 100%;
 	position: absolute;
 	height: 100%;
 }
-#control, .test {
+#search {
+	height: 2em;
+	position:relative;
+}
+.control, .test {
 	height: 100%;
 	position: relative;
+	bottom:0;
+	display:block;
 }
 #funcpopup {
 	height: 300px;
 	width: 300px;
+}
+#controlimg2, #controlimg3 {
+	height: 100%;
+	bottom: 0;
+	top: 0;
+	display:relative;
 }
 #funcpopup button {
 	height: 150px;
@@ -95,11 +107,32 @@ footer {
 
 }
 .ui-block-a, .ui-block-b {
-	border-right:  1px solid black;
-}
-#main p {
-	width: 75%;
 	 
+}
+#page2 .h2border {
+	border: solid 1px black;
+	border-bottom: none;
+}
+#page2 h2 {
+	
+	margin-bottom: 0;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	text-align:center;
+	width: 100%;
+	display:inline-block;
+	position:relative;
+	height: 100%;
+	text-transform: uppercase;
+}
+#page2 h2.hide {
+	visibility: hidden;
+	
+}
+
+#main #page1 p {
+	width: 75%;
+	display: absolute; 
 	margin: 0 auto;
 	text-align: center;
 	border: 1px solid black;
@@ -114,8 +147,13 @@ footer {
 }
 
 
-
-
+form {
+	display:block;
+}
+.ui-input-search {
+	position:relative;
+	display:block;
+}
 @media all and (max-width: 720px) {
 	#page1 .ui-block-a,
 	#page1 .ui-block-b,

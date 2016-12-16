@@ -32,6 +32,7 @@ function tapHandler(event) {
  				 
  				 
  				$('#controlimg1').attr('src', 'images/snow.jpg');
+
  				
  			}
  			else { $('#controlimg1').attr('src', 'test.jpg'); }
@@ -46,9 +47,9 @@ function tapHandler(event) {
  function place2nd(containvalue) {
 
  	$('#controlimg2').hide();
- 	
-
- 	$('#controlimg2').attr('src', containvalue).slideDown(1500, function() {
+ 	//$("#image").rotate({angle:45});
+ 	$('#page2 div.ui-block-b h2').css({'visibility': 'visible', 'backgroundColor': 'aqua'});
+ 	$('#controlimg2').attr('src', containvalue).slideDown(700, function() {
  		//containvalue2 = containvalue;
  		
  		place3rd(containvalue)});
@@ -57,7 +58,11 @@ function tapHandler(event) {
 
  	
  	$('#controlimg2').slideUp(function() {
- 	$('#controlimg3').attr('src', containvalue).slideDown(1500);
+ 	$('#page2 div.ui-block-b h2').css('visibility', 'hidden');
+ 	$('#page2 div.ui-block-c h2').css({'visibility': 'visible', 'backgroundColor': 'aqua'});
+ 	$('#controlimg3').attr('src', containvalue).slideDown(700).slideUp(700, function() {
+ 		$('#page2 div.ui-block-c h2').css('visibility', 'hidden');
+ 	});
  });
 }
 /*
