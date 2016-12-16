@@ -49,8 +49,21 @@ form {
 #pg1header a {
 
 }
-a#pop {
+#test {
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+#testcontainer {
+	height: 350px;
+	position: relative
 	background: aqua;
+}
+a#pop {
+	background: white;
+}
+.thing {
+	content: url('water_lily.jpeg');
 }
 #pg1header {
 	clear: both;
