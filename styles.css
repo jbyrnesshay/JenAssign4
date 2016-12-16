@@ -24,7 +24,7 @@ body {
 	float: right;
 	width: 50%;
 }
-#pg1header div[data-role="navbar"] li,#pg2header div[data-role="navbar"] li {
+#pg1header div[data-role="navbar"] li, #pg2header div[data-role="navbar"] li {
 	display: inline-block;
 }
 form {
@@ -49,18 +49,30 @@ form {
 #pg1header a {
 
 }
-#test {
+#test, .test {
 	width: 100%;
-	position: relative;
+	position: absolute;
 	height: 100%;
 }
-#testcontainer {
+#control, .test {
+	height: 100%;
+	position: relative;
+}
+#funcpopup {
+	height: 300px;
+	width: 300px;
+}
+#funcpopup button {
+	height: 150px;
+}
+#testcontainer, .testcontainer {
 	height: 350px;
 	position: relative
 	background: aqua;
 }
 a#pop {
 	background: white;
+ 
 }
 .thing {
 	content: url('water_lily.jpeg');
@@ -94,7 +106,7 @@ footer {
 }
 
 
-#main {
+#main, .main {
 	top:0;
 	bottom:0;
 	position:relative;
@@ -131,7 +143,7 @@ footer {
 	display: block;
 	margin-bottom: 0;
 }
-div#main {
+div#main, .main {
 margin-top: 8em;
 }
 	 

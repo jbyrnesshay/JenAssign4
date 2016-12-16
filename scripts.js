@@ -14,7 +14,7 @@ function tapHandler(event) {
 	//$('#funclink').popup('open');
 
 	$('#popupBasic').popup('open');
-	//event.preventDefault();
+	event.preventDefault();
 	$('#popupBasic').tap(function() {
 		//event.enableDefault();
 		 $(this).unbind('#fun');
@@ -22,22 +22,44 @@ function tapHandler(event) {
 }//end tapHanlder
 
 
- $('#testcontainer').swipeleft( function() {
+ $('.testcontainer').swipe( function() {
  	//alert('ya');
- 	containvalue = $('#test').attr('src');
- 	alert(containvalue);
- 		$('#test').slideUp(5000, function(){
+ 	containvalue = $('#controlimg1').attr('src');
+ 	 //alert(containvalue);
+ 		$('#controlimg1').slideUp(3000, function(){
+ 			place2nd(containvalue);
  			if (containvalue=='test.jpg') {
  				 
  				 
- 				$('#test').attr('src', 'water_lily.jpeg');
+ 				$('#controlimg1').attr('src', 'images/snow.jpg');
  				
  			}
- 			else { $('#test').attr('src', 'test.jpg'); }
+ 			else { $('#controlimg1').attr('src', 'test.jpg'); }
+ 			$('#controlimg3').hide();
  		}
+
  			//$('#test').toggleClass('thing');}
- 		).slideDown(5000);
+ 		).slideDown(3000);
  });//end swipelef
+
+
+ function place2nd(containvalue) {
+
+ 	$('#controlimg2').hide();
+ 	
+
+ 	$('#controlimg2').attr('src', containvalue).slideDown(1500, function() {
+ 		//containvalue2 = containvalue;
+ 		
+ 		place3rd(containvalue)});
+ }
+ function place3rd(containvalue2) {
+
+ 	
+ 	$('#controlimg2').slideUp(function() {
+ 	$('#controlimg3').attr('src', containvalue).slideDown(1500);
+ });
+}
 /*
 first() {
 	$('#control').slideUp(5000);
