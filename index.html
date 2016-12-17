@@ -7,14 +7,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width initial-scale=1">
 		<link href="styles.css" rel="stylesheet" type="text/css">
-			<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+			<link rel="stylesheet" href="themes/joachim.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link href="styles.css" rel="stylesheet" type="text/css">
-		 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		 
 	</head>
 	<body>
-		<section data-role="page" id="page1">
-			<div data-role="header" id="pg1header" data-id="mainheader" data-theme="b" data-position="fixed">
+		<section data-role="page" id="page1" data-theme="c">
+			<div data-role="header" id="pg1header" data-id="mainheader" data-theme="c" data-position="fixed">
 				<h1>Assignment #4</h1>
 				<div data-role="navbar" id="nav" >
 					<ul>
@@ -27,15 +30,21 @@
 			<div data-role="main" class="ui-content" id="main">
 			 
 				<div class="ui-grid-b">
-					<div class="ui-block-a">
+					<div class="ui-block-a ui-body-c ui-corner-all ui-rounded-corners" >
 						<p>you have arrived at the left side of page</p
 					>
 					<p id="target">
-					I like to type about things and say a lot of things.  you probably do too.  but the things you say don't make the sense that your small brain makes you think they do.  You are not able to perceive this because of your small mind and bad ways.  I understand things better and would like to tell you about this.  to learn more click <a href="#page2" class="ui-shadow ui-btn ui-corner-all">here</a>.  thank you.
+					Here is a demonstration of a modal, which holds a button which links to the 2nd jquerymobile page <a href="#page2"  class="ui-shadow ui-btn ui-corner-all ui-btn-b">click this button</a> 
 					</p>
+					<a id="funclink" href="#popupBasic" data-rel="popup"></a>
+ 
+						<div data-role="popup" id="popupBasic">
+  						<p id="funcpopup">Do you want to go to the 2nd page?
+  						<button><a id="fun" class="ui-btn ui-btn-icon-left ui-icon-arrow-r ui-btn-b" href="#page2">YES, LET'S GO!</a></button></p>
+						</div>
 					
 					</div>
-					<div class="ui-block-b">
+					<div class="ui-block-b ui-body-c ui-corner-all ui-rounded-corners">
 						
 						<p>you have arrived at the other place
 						<a href="#popup" data-rel="popup" id="pop" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext">click</a>
@@ -60,47 +69,45 @@
 						 <p>That's what we'll do with the drunken sailor.</p>
 							</div>
 
-						<a id="funclink" href="#popupBasic" data-rel="popup"></a>
- 
-						<div data-role="popup" id="popupBasic">
-  						<p id="funcpopup">This is a completely basic popup, no options set.
-  						<button><a id="fun" href="#page2">test</a></button></p>
-						</div>
+						
 					</div>
 					<div class="ui-block-c">
 						<p>you have arrived at the other place too</p>
-						<form>
-						<fieldset>
-							<select name="select-choice-b" id="select-choice-b" data-native-menu="false">
-							  <option>my menu</option>
-							  <option value="the best">the best</option>
-							  <option value="better">better</option>
-							  <option value="good">good</option>
-							  <option value="bad">bad</option>
-							  <option value="the worst">the worst</option>
-							  </select>
-
-							</fieldset>
-							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-							<legend>blah blah</legend>
-							
-							<input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
-							<label for = "radio-choice-c">list</label>
-							<input type="radio" name="radio-choice-b" id="radio-choice-d" value="grid">
-							<label for = "radio-choice-d">grid</label>
-							<input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
-							<label for = "radio-choice-e">gallery</label>
-							</fieldset>
-							<fieldset>
-							<label for="slider-flip-m">mini flip switch</label>
-							<select name="slider=flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+						<form id="mainform" class='ui-body-c ui-corner-all ui-rounded-corners'>
+						<label for = "bswitch">
+							<fieldset name="bswitch" id="bswitch">
+							<label for="slider-flip-m">themeroller background?</label>
+							<select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
 							<option value="off">No</option>
 							<option value="on" selected=''>yes</option>
 							</select>
 							</fieldset>
+						<fieldset>
+							<select name="select-background" id="select-background" data-theme="b" data-native-menu="false">
+							  <option>my menu</option>
+							  <option value="green">green</option>
+							  <option value="pink">pink</option>
+							  <option value="brown">brown</option>
+							  <option value="purple">purple</option>
+							  <option value="orange">orange</option>
+							  <option value="theme">return to theme</option>
+							  </select>
+
+							</fieldset>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+							<legend>change background with radio</legend>
+							
+							<input type="radio" name="radiobutton" id="radio-theme" value="theme" checked="checked">
+							<label for = "radio-theme">theme</label>
+							<input type="radio" name="radiobutton" id="radio-red" value="red">
+							<label for = "radio-red">red</label>
+							<input type="radio" name="radiobutton" id="radio-blue" value="blue">
+							<label for = "radio-blue">blue</label>
+							</fieldset>
+							
 							<fieldset>
-							<label for="slider-fill">blah blah </label>
-							<input type="range" name="slider-fill" id="slider-fill" value="50" min="0" max="100"  data-highlight="true" data-theme="b" data-track-theme="b">
+							<label for="slider-fill">Just a slider </label>
+							<input type="range" name="myslider" id="mysliderr" value="50" min="0" max="100"  data-highlight="true" data-theme="b" data-track-theme="b">
 							</fieldset>
 						</form>
 					</div>
@@ -122,8 +129,8 @@
 
 				<div class="ui-block-a ui-corner-all custom-corners">
  		 		<p>test</p>
- 		 		<div class="h2border">
- 		 			<h2> swipe the photo right </h2>
+ 		 		<div class="h2border test">
+ 		 			<h2> swipe the photo </h2>
  		 			</div>
 						<div class="testcontainer">
 							<div class="control ui-corner-all custom-corners">
