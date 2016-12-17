@@ -1,0 +1,127 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+}
+/*left and right container css*/
+#left {
+	float: left;
+	border: 1px solid black;
+	width: 58%;
+	height: 20em;
+}
+#right {
+	position: fixed;
+	right: 0;
+	width: 42%;
+	border: 1px solid black;
+	height: 35em;
+}
+/*header nav css */
+header {
+	background-color:
+	rgb(121, 177, 233);
+	height: 3em;
+	position: relative;
+	margin-bottom: .4em;
+}
+nav {
+	position:  absolute;
+	width: 100%;
+}
+header nav ul {
+    position: relative;
+	float: right;
+	top: -4.4em;
+	background: black;
+	text-align:center;
+	text-transform:uppercase;
+	margin-right: 3em;
+	padding: .5em;
+	font-weight:bolder;
+}
+header nav ul li {
+	display: inline-block;
+	margin-left: 1em;
+	background:white;
+	border-radius: 5px;
+	padding: .3em;
+
+}
+header nav ul li a {
+	 padding: .3em;
+	 text-decoration:none;
+	 font-weight:bolder;
+}
+h1 {
+	display:inline-block;
+	margin:0;
+	margin-left:  2em;
+	margin-bottom: .5em;
+}
+/*drag image section css */
+img.draggable {
+	width: 200px;
+	size: 200px;
+	padding:0em;
+	margin: 0em;
+	z-index: 1;
+}
+#draggable p {
+	border: 1px solid black;
+}
+#target {
+	left: 14em;
+	top: 24em;
+	position: absolute;
+	padding:  0em;
+	z-index: 0;
+	margin: 0em;	
+	background: blue;
+	width: 400px;
+	height: 250px;
+}
+#dragdiv {
+	padding: .75em;
+}
+#dragdiv h2 {
+	background: antiquewhite;
+	text-align:center;
+	text-transform:uppercase;
+}
+#dragdiv p {
+	background: antiquewhite;
+	text-transform: uppercase;
+	font-weight:bolder;
+	text-align:center;
+}
+
+/*tab wdget section css */
+#tabs li {
+	display:inline-block;
+	padding: .4em;
+ 	width: 30%;
+	text-transform: uppercase;
+	position: relative;
+}
+#tabs li a {
+	text-decoration:none;
+	font-size: 1.1em;
+	font-weight:bolder;
+}
+#tabs ul {
+	margin: 0 auto;
+	text-align:center;
+}
+#tabs div {
+	width: 75%;
+	margin: 0 auto;
+	position: relative;
+	background: #d3d3d3;
+	bottom: 0;
+	height: 100%;
+}
+#tabs {
+	height: 30em;
+	position: relative;
+}
+

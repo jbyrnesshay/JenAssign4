@@ -1,170 +1,165 @@
+<!-- all programming by joachim byrnes-shay-->
+<!--HERE ARE THE LINE #s FOR ASSIGNMENT REQUIREMENTS:  -->
+<!--grid at line 30, button role line 38 and icon line 23, filter widget line 50, popup widget line 36, custom theme line 18 -->
+<!--form at line 69 (the primary form, not the only one), jquery mobile events TAP, related html line 36 and SWIPE,related html 125-156 -->
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
-
-		
-		<title> assignment </title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width initial-scale=1">
-		<link href="styles.css" rel="stylesheet" type="text/css">
-			<link rel="stylesheet" href="themes/joachim.min.css" />
-<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<link href="styles.css" rel="stylesheet" type="text/css">
-		 
+		<title> assignment 4</title>
+		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="themes/joachim.min.css" /><!-- custom theme -->
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" /><link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<section data-role="page" id="page1" data-theme="c">
+	<section data-role="page" id="page1" data-theme="c"><!--data theme c is my custom theme-->
 			<div data-role="header" id="pg1header" data-id="mainheader" data-theme="c" data-position="fixed">
 				<h1>Assignment #4</h1>
-				<div data-role="navbar" id="nav" >
+				<div data-role="navbar" class="nav" >
 					<ul>
-						<li><a href="#page2" data-transition="turn">2nd page</a></li>
 						<li><a href="#page1" data-transition="turn" class="ui-btn ui-btn-icon-left ui-icon-home">home</a></li>
-						<li><a href="external.html" data-ajax="false">jquery UI page</a><!-- use d-aj false for external same domain, use rel external for offsite-->
+						<li><a href="#page2" data-transition="turn">2nd page</a></li>
+						<li><a href="external.html" data-ajax="false">jquery UI page</a></li>
 					</ul>
 				</div>
 			</div>
-			<div data-role="main" class="ui-content" id="main">
-			 
-				<div class="ui-grid-b">
+			<div data-role="main" class="ui-content main">
+			 	<div class="ui-grid-b"><!-- grid system, will use as 3 columns -->
 					<div class="ui-block-a ui-body-c ui-corner-all ui-rounded-corners" >
-						<p>you have arrived at the left side of page</p
-					>
-					<p id="target">
-					Here is a demonstration of a modal, which holds a button which links to the 2nd jquerymobile page <a href="#page2"  class="ui-shadow ui-btn ui-corner-all ui-btn-b">click this button</a> 
-					</p>
-					<a id="funclink" href="#popupBasic" data-rel="popup"></a>
- 
-						<div data-role="popup" id="popupBasic">
-  						<p id="funcpopup">Do you want to go to the 2nd page?
-  						<button><a id="fun" class="ui-btn ui-btn-icon-left ui-icon-arrow-r ui-btn-b" href="#page2">YES, LET'S GO!</a></button></p>
+						<h2>TAP inside the red bordered text below</h2>
+						<p> you'll get a modal.  alternatively click the button</p>
+						<p id="TapTarget">Travelling in Tibet, I saw a yak wandering free on the grounds of the Sera Monastery. I don't know where it was going or where it was coming from.  Quite likely, it belonged to the monks. It was not my first yak, but definitely my first yak sighting at a monastery.
+							<a href="#page2" class="ui-shadow ui-btn ui-corner-all ui-btn-b">click this button</a></p>
+						<a id="funclink" href="#popupBasic" data-rel="popup"></a>
+ 						<div data-role="popup" id="popupBasic">
+  							<p id="funcpopup">Do you want to go to the 2nd page? <a id="fun" data-role="button" class="ui-btn ui-btn-icon-left ui-icon-arrow-r ui-btn-b" href="#page2">YES, LET'S GO!</a></p>
 						</div>
-					
 					</div>
 					<div class="ui-block-b ui-body-c ui-corner-all ui-rounded-corners">
-						
-						<p>you have arrived at the other place
-						<a href="#popup" data-rel="popup" id="pop" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext">click</a>
-						</p>
+						<h2>you can use filter to search through some text I wrote about my trip to Tibet </h2>
+							<a href="#popup" data-rel="popup" id="pop" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext">click</a>
 						<div data-role="popup" id="popup" data-theme="a" class="ui-content"> this is a <strong>popup</strong></div>
 						<form>
-						  <input data-type="search" id="search">
-						 </form>
+						 	<input data-type="search" id="search">
+						</form>
+
+
 						<div class="elements" data-filter="true" data-input="#search">
-						 <p>Drunken Sailor (What Shall We Do with a Drunken Sailor?) Irish Traditional Am What'll we do with a drunken sailor? </p>
-						 <p>What'll we do with a drunken sailor? </p>
-						 <p> What'll we do with a drunken sailor?</p>
-						 <p>Earl-aye in the morning? </p>
-						 <p>Way, hey and up she rises</p> 
-						 <p>Patent blocks o' diff'rent sizes</p> 
-						 <p>Way, hey and up she rises</p> 
-						 <p>Earl-aye in the morning</p> 
-						 <p>Sling him in the long boat till he's sober</p> 
-						 <p>Keep him there and make 'im bale 'er.</p> 
-						 <p>Pull out the plug and wet him all over</p> 
-						 <p>Take 'im and shake 'im, try an' wake 'im. </p><p>Trice him up in a runnin' bowline.</p> 
-						 <p>That's what we'll do with the drunken sailor.</p>
-							</div>
 
+							<p>In January 2016, I went solo on a 3-day trip to Lhasa, Tibet. </p>
+							<p>The distance from my town of Pittsburgh, Pennsylvania to Lhasa, Tibet is 7,556 miles.</p>
+							<p> Lhasa is actually only the 2nd most distant place I've been to. </p>
+							<p>I've also been to Kathmandu, Nepal, which is further (7629 miles), on another trip.</p>
+							<p>Lhasa is the site of a number of historic monasteries and temples.  </p>
+							<p>It's one of the few large cities in Tibet but it's a small city by American standards. It's more equivalent to a large town.</p> 
+							<p>From my town of Pittsburgh, Pennsylvania, the quickest you can do the trip to Lhasa is in about 30 hours of travel (one-way).</p> 
+							<p>There are no direct flights from the United States.</p> 
+							<p>Though Lhasa is modernizing,it still has historical sites and old-town areas such as Barkhor Square </p> 
+							<p>The trip was challenging for a solo traveller.</p> 
 						
+						</div>
 					</div>
+					
 					<div class="ui-block-c">
-						<p>you have arrived at the other place too</p>
-						<form id="mainform" class='ui-body-c ui-corner-all ui-rounded-corners'>
-						<label for = "bswitch">
-							<fieldset name="bswitch" id="bswitch">
-							<label for="slider-flip-m">themeroller background?</label>
-							<select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
-							<option value="off">No</option>
-							<option value="on" selected=''>yes</option>
-							</select>
-							</fieldset>
-						<fieldset>
-							<select name="select-background" id="select-background" data-theme="b" data-native-menu="false">
-							  <option>my menu</option>
-							  <option value="green">green</option>
-							  <option value="pink">pink</option>
-							  <option value="brown">brown</option>
-							  <option value="purple">purple</option>
-							  <option value="orange">orange</option>
-							  <option value="theme">return to theme</option>
-							  </select>
+						<h2>Use this form to play around the page background color</h2>
 
+						<form id="mainform" class='ui-body-c ui-corner-all ui-rounded-corners'>
+
+							 <fieldset name="bswitch" id="bswitch">
+						
+								<label for="slider-flip-m">themeroller background?</label>
+								
+								<select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+									<option value="off" aria-selected='false'>No</option>
+									<option value="on" selected='' aria-selected='true'>yes</option>
+								</select>
 							</fieldset>
-							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-							<legend>change background with radio</legend>
-							
-							<input type="radio" name="radiobutton" id="radio-theme" value="theme" checked="checked">
-							<label for = "radio-theme">theme</label>
-							<input type="radio" name="radiobutton" id="radio-red" value="red">
-							<label for = "radio-red">red</label>
-							<input type="radio" name="radiobutton" id="radio-blue" value="blue">
-							<label for = "radio-blue">blue</label>
-							</fieldset>
-							
+
 							<fieldset>
-							<label for="slider-fill">Just a slider </label>
-							<input type="range" name="myslider" id="mysliderr" value="50" min="0" max="100"  data-highlight="true" data-theme="b" data-track-theme="b">
+								<select name="select-background" id="select-background" data-theme="b" data-native-menu="false">
+									<option selected='' aria-selected='true'>my menu</option>
+									<option value="green" aria-selected='false'>green</option>
+									<option value="pink" aria-selected='false'>pink</option>
+									<option value="brown" aria-selected='false'>brown</option>
+									<option value="purple" aria-selected='false'>purple</option>
+									<option value="orange" aria-selected='false'>orange</option>
+									<option value="theme" aria-selected='false'>return to theme</option>
+							  	</select>	
+							</fieldset>
+
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+								<legend>change background with radio</legend>
+								<input type="radio" name="radiobutton" id="radio-theme" value="theme" checked="checked" aria-checked="true">
+								<label for = "radio-theme">theme</label>
+								<input type="radio" name="radiobutton" id="radio-red" value="red" aria-checked="false">
+								<label for = "radio-red" >red</label>
+								<input type="radio" name="radiobutton" id="radio-blue" value="blue" aria-checked="false">
+								<label for = "radio-blue">blue</label>
+							</fieldset>
+							<fieldset>
+								<label for="myslider">Just a slider </label>
+								<input type="range" name="myslider" id="myslider" value="50" min="0" max="100"  aria-valuemin='0' aria-valuemax='0' aria-valuenow='0' data-highlight="true" data-theme="b" data-track-theme="b">
 							</fieldset>
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
- 		 <section data-role="page" id="page2">
- 		 <div data-role="header" id="pg2header" data-id="mainheader" data-theme="b" data-position="fixed">
-							<div data-role="navbar" id="nav" >
-								<ul>
-									<li><a href="#page2" data-transition="turn">2nd page</a></li>
-									<li><a href="#page1" data-transition="turn" class="ui-btn ui-btn-icon-left ui-icon-home">home</a></li>
-									<li><a href="external.html" data-ajax="false">jquery UI page</a><!-- use d-aj false for external same domain, use rel external for offsite--></li>
-								</ul>
-							</div>
-				</div>		
-			<div data-role="main" class="ui-content" id="main">
+ 		<section data-role="page" id="page2">
+ 			<div data-role="header" id="pg2header" data-id="mainheader" data-theme="b" data-position="fixed">
+				<div data-role="navbar" class="nav" >
+					<ul>
+						<li><a href="#page2" data-transition="turn">2nd page</a></li>
+						<li><a href="#page1" data-transition="turn" class="ui-btn ui-btn-icon-left ui-icon-home">home</a></li>
+						<li><a href="external.html" data-ajax="false">jquery UI page</a></li>
+					</ul>
+				</div>
+			</div>		
+			<div data-role="main" class="ui-content main">
 				<div class="ui-grid-b">
-
-				<div class="ui-block-a ui-corner-all custom-corners">
- 		 		<p>test</p>
- 		 		<div class="h2border test">
- 		 			<h2> swipe the photo </h2>
- 		 			</div>
+					<div class="ui-block-a ui-corner-all custom-corners">
+ 		 			 
+ 		 				<div class="h2border">
+ 		 					<h2> swipe the photo </h2>
+ 		 				</div>
 						<div class="testcontainer">
 							<div class="control ui-corner-all custom-corners">
-								<img src="test.jpg" id='controlimg1' class="test" alt="a place...">
+								<img src="images/test.jpg" id='controlimg1' class="imagecontrol" alt="a place...">
 							</div>
 						</div>
-				</div>
-				
-				<div class="ui-block-b">
-					<p>taa</p>
-					<div class="h2border">
-					<h2 class="hide"> here I am! </h2>
 					</div>
+					<div class="ui-block-b">
+					 
+						<div class="h2border">
+							<h2 class="hide"> here I am! </h2>
+						</div>
 						<div class="testcontainer">
 							<div class="control" id="control2">
-								 <img src="" id="controlimg2" class="test" alt="">
+									<!--this container has a null img src in order to validate -->
+									<!-- I dynamically change the source in the js file -->
+									<!-- this technique to attain validate from -->
+									<!--http://stackoverflow.com/questions/19126185/setting-an-image-src-to-empty -->
+									<img src="//:0" id="controlimg2" class="imagecontrol" alt="">
 							</div>
 						</div>
- 				</div>
- 				<div class="ui-block-c">
- 				<p>gag</p>
- 				<div class="h2border">
- 				<h2 class="hide"> now I'm here!  </h2>
- 				</div>
+	 				</div>
+	 				<div class="ui-block-c">
+	 				 
+	 					<div class="h2border imagecontrol">
+	 						<h2 class="hide"> now I'm here!  </h2>
+	 					</div>
 						<div class="testcontainer">
 							<div class="control" id="control3">
-								<img src="" id="controlimg3" class="test" alt="">
-							 
+								<img src="//:0" id="controlimg3" class="imagecontrol" alt="">
 							</div>
 						</div>
- 				</div>	
-			</div>
-		 </div>
-		  </section>
+	 				</div>	
+				</div>
+		 	</div>
+		</section>
 		<script src="scripts.js"></script>
 	</body>
 </html>

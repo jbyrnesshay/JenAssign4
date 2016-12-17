@@ -1,28 +1,94 @@
+<!-- all code by Joachim Byrnes-Shay -->
+<!-- images on this page are from Pexels.com, licensed under create commons zero license-->
+<!-- except test.jpeg, which was phographed by myself while in Tibet -->
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 	<head>
 		<title>jquery ui</title>
 		<meta charset="utf-8">
-		<!-- do i need this viewport meta tag for jquery UI? 
 		<meta name="viewport" content="width=device-width initial-scale=1">
-		-->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-		<link href="styles.css" rel="stylesheet" type="text/css">
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- my own stylesheet -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<!--with custom theme -->
+  		<link rel="stylesheet" href="css_ui_custom/jquery-ui.css" type="text/css">
+  		<!-- my jqueryui functions -->
+  			<link href="css/jqueryui.css" rel="stylesheet" type="text/css">
+		<script src='myjqueryui.js'></script>
 	</head>
 	<body>
-		 <div data-role="header" id="header">
+	 	<header>
 			<h1>jquery ui stuff</h1>
 			<nav>
 				<ul>
-					<li>Fucking <a href="#second">2nd  </a>link</li>
-					<li><a href="#first">home</a></li>
-					<li>external <a href="external.html">page</a>
+					<li><a href="index.html">homepage</a></li>
+					<li> <a href="index.html#page2">2ndpage</a></li>
+					<li><a href="external.html">thispage</a></li>
 				</ul>
 			</nav>
-		</div>
-		 
+		</header>
+		<main class="ui-widget-container">
+		<!--the entire page is subject to the custom jqueryui theme in jquery-ui-css-->
+			<div id="left"><!-- left container holds all the draggable content and related action -->
+				<div id="dragdiv" class="ui-widget-content">
+					
+					<h2>drag all the pics one by one onto the solid blue box</h2>
+						<p>see them explode</p>
 
+						<!--except test.jpt the following pics are from Pexels.com, creative commons zero licence-->
+						<img src="images/test.jpg" alt="tibetan hideaway" class="draggable ui-widget-content">
+						<img src="images/snow.jpg" alt="snow image from pexels" id="snow" class="draggable ui-widget-content">
+						<img src="images/nightshore.jpeg" alt="shore at evening" class="draggable ui-widget-content">
+			 			<img src="images/forestmist.jpeg" alt="dawn in the forest" class="draggable ui-widget-content">
+				</div>
+				
+				<!--this styled div is the blue square target to drag pictures onto -->
+				<div id="target">
+				
+				</div>
+			</div><!-- end left -->
+			
+
+			<!-- right side tab widget containers and content -->
+			<div id="right" class="ui-widget">
+				<div id="tabs" class="ui-widget-content">
+
+			  		<ul>
+			    		<li class="tabcss"><a href="#tab-a">Lhasa Weather</a></li>
+			   			 	<li class="tabcss"><a href="#tab-b">Lhasa People</a></li>
+			    			<li class="tabcss"><a href="#tab-c">Lhasa Sights</a></li>
+			  		</ul>
+
+				  	<div id="tab-a" class='ui-widget-content'>
+
+				  		<h3>Lhasa Weather</h3>
+
+				    	<p>
+					    	Still talking about my trip to Tibet ... Like in Pittsburgh, in January in Lhasa it was winter too, so it was fairly cold, though not that much colder during the day. There wasn’t any snow. I packed light, and didn’t bring a heavy jacket, so I was pretty cold. The high daily temperature was about 35-40 degrees Fahrenheit, but it was much colder early in the morning and late at night.
+				    	</p>
+				  	</div>
+
+				  	<div id="tab-b" class='ui-widget-content'>
+
+				  		<h3>Lhasa People</h3>
+
+				    	<p>
+					    	The people were a mix of ethnic Tibetans and Chinese. I didn’t get to observe the people much other than to just see them going about their daily business There were many Chinese police around to keep watch on everything. It was not the tourist season, so I was one of the few Westerners around. It coincided with pilgrimage, so there will pilgrims from far away.
+				    	</p>
+
+				 	</div>
+
+				  	<div id="tab-c" class='ui-widge-content'>
+
+				  		<h3>Lhasa Sights</h3>
+				    	
+				    	<p>
+					    	Chinese culture is definitely modernizing Lhasa, and the main strips have a small city feel, though there are not any very tall buildings. It was therefore not overall the image I had in mind of it, which was an image or a less modern society. There are a few older historical parts of Lhasa that preserve more of the old-fashioned traditional feel. The monasteries and temples are mostly either museums now, or are have parts that are active but are also museums or tourist sites at the same time.
+				    	</p>
+
+				  	</div>
+	 			</div>
+	 		</div><!--end right-->
+ 		</main>
 	</body>
-</html>
+</html>  
